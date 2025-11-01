@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Medicine</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(to right, #83a4d4, #b6fbff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0a5a74;
+            margin-bottom: 25px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #0a5a74;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #0a5a74;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #0c7b93;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #0a5a74;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>✏️ Edit Medicine</h2>
+        <form method="POST" action="/pharmacist/edit_medicine?id={{medicine_id}}">
+            <label for="medicine_name">Medicine Name:</label>
+            <input type="text" id="medicine_name" name="medicine_name" value="{{medicine_name}}" required>
+
+            <label for="price">Price (₹):</label>
+            <input type="number" step="0.01" id="price" name="price" value="{{price}}" required>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" value="{{quantity}}" required>
+
+            <label for="manufacturer_name">Manufacturer Name:</label>
+            <input type="text" id="manufacturer_name" name="manufacturer_name" value="{{manufacturer_name}}" required>
+
+            <label for="expiry_date">Expiry Date:</label>
+            <input type="date" id="expiry_date" name="expiry_date" value="{{expiry_date}}" required>
+
+            <button type="submit">💾 Update Medicine</button>
+        </form>
+        <a href="/pharmacist/dashboard">⬅ Back to Dashboard</a>
+    </div>
+</body>
+</html>

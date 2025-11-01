@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Medicine</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: url('https://images.unsplash.com/photo-1582719478181-2f56a5f4e69a?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            width: 80%;
+            max-width: 500px;
+            margin: 60px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            padding: 30px 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0a5a74;
+            margin-bottom: 25px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            color: #0a5a74;
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        button {
+            background-color: #0a5a74;
+            color: white;
+            font-size: 16px;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #0c7b93;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            color: #0a5a74;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>➕ Add Medicine</h1>
+
+        <form action="/pharmacist/add_medicine" method="POST">
+            <label for="medicine_name">Medicine Name:</label>
+            <input type="text" id="medicine_name" name="medicine_name" placeholder="Enter medicine name" required>
+
+            <label for="manufacturer_name">Manufacturer:</label>
+            <input type="text" id="manufacturer_name" name="manufacturer_name" placeholder="Enter manufacturer name" required>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" min="1" required>
+
+            <label for="price">Price per Unit (₹):</label>
+            <input type="number" id="price" name="price" placeholder="Enter price per unit" min="1" step="0.01" required>
+
+            <label for="expiry_date">Expiry Date:</label>
+            <input type="date" id="expiry_date" name="expiry_date" required>
+
+            <button type="submit">💾 Save Medicine</button>
+        </form>
+
+        <a href="/pharmacist/dashboard">🔙 Back to Dashboard</a>
+    </div>
+</body>
+</html>

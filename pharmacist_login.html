@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pharmacist Login - Medicine Tracker</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .bg-gradient {
+      background: linear-gradient(135deg, #212529, #343a40) !important;
+    }
+    .navbar-brand {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #fff !important;
+      letter-spacing: 1px;
+    }
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #00c6ff !important;
+    }
+
+    .page-header {
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                  url('https://wallpapercave.com/wp/wp2968617.jpg') no-repeat center center/cover;
+      height: 45vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      margin-top: 56px;
+    }
+    .page-header h1 {
+      text-shadow: 2px 2px 15px rgba(0,0,0,0.7);
+    }
+
+    .login-form {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      margin-top: -50px;
+    }
+    .login-form h3 {
+      margin-bottom: 25px;
+      font-weight: bold;
+      text-align: center;
+      color: #007bff;
+    }
+    .form-control:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 10px rgba(0,123,255,0.25);
+    }
+    .btn-login {
+      background: linear-gradient(135deg, #00c6ff, #007bff);
+      color: #fff;
+      border-radius: 50px;
+      padding: 12px 28px;
+      font-weight: bold;
+      transition: 0.3s;
+      width: 100%;
+    }
+    .btn-login:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #007bff, #00c6ff);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      background: linear-gradient(135deg, #343a40, #212529);
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-gradient shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="/">💊 Medicine Tracker</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/pharmacist/register">Register</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Pharmacist Login</h1>
+      <p class="lead">Access your dashboard and manage your medicine stock</p>
+    </div>
+  </section>
+
+  <!-- Login Form -->
+  <section class="container">
+    <div class="login-form mx-auto col-md-6">
+      <h3>Login to Your Account</h3>
+      <form action="/pharmacist/login" method="POST">
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" name="email" class="form-control" placeholder="Enter your registered email" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" name="password" class="form-control" placeholder="Enter password" required>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div>
+            <a href="/pharmacist/forgot_password">Forgot password?</a>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-login">Login</button>
+      </form>
+      <div class="text-center mt-3">
+        <p>Don't have an account? 
+          <a href="/pharmacist/register">Register here</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p class="mb-0">&copy; 2025 Medicine Tracker. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
