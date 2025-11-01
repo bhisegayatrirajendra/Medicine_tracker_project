@@ -86,3 +86,24 @@ Allow prescription uploads for faster medicine search.
 Integrate AI-based suggestion system for alternate medicines.
 
 Enable push notifications when a medicine becomes available nearby.
+
+🗂️ ✅ Project Folder Structure
+
+Medicine_Tracker/
+│
+├── server.py                     
+│
+├── templates/                    
+│   ├── index.html
+│   ├── pharmacist_login.html
+│   ├── pharmacist_register.html
+│   ├── pharmacist_dashboard.html
+│   ├── add_medicine.html
+│   ├── edit_medicine.html
+│   ├── forgot_password.html
+│
+└── static/                     
+    ├── style.css
+    ├── bg.jpg                     
+    ├── js/                     
+    └── images/                 
