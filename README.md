@@ -2,7 +2,7 @@
 
 Medicine Tracker Website
 
-🌐 Project Overvie:
+🌐 Project Overview:
 
 The Medicine Tracker Website is a web-based application designed to help users quickly locate pharmacies or medical stores that have a specific medicine available in their inventory.
 
